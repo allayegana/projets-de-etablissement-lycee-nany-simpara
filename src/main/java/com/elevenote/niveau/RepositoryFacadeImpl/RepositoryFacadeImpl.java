@@ -1,15 +1,13 @@
-package RepositoryFacadeImpl;
+package com.elevenote.niveau.RepositoryFacadeImpl;
 
-import Builler.BuilderEtudiant;
-import Entity.Etudiant;
-import RepositoryFacade.EtudiantRepositoryFacade;
-import Request.EtudiantRequest;
-import Response.EtudiantResponse;
+import com.elevenote.niveau.Builler.BuilderEtudiant;
+import com.elevenote.niveau.Entity.Etudiant;
+import com.elevenote.niveau.RepositoryFacade.EtudiantRepositoryFacade;
+import com.elevenote.niveau.Request.EtudiantRequest;
+import com.elevenote.niveau.repository.EtudiantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.EtudiantRepository;
 
-import java.util.List;
 @Service
 public class RepositoryFacadeImpl implements EtudiantRepositoryFacade {
 

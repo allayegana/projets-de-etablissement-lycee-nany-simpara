@@ -1,9 +1,6 @@
-package RepositoryFacade;
+package com.elevenote.niveau.RepositoryFacade;
 
-import Request.EtudiantRequest;
-import Response.EtudiantResponse;
-
-import java.util.List;
+import com.elevenote.niveau.Request.EtudiantRequest;
 
 public interface EtudiantRepositoryFacade {
 

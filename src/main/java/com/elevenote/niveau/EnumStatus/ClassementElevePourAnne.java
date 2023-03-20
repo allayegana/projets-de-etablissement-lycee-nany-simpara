@@ -1,4 +1,4 @@
-package EnumStatus;
+package com.elevenote.niveau.EnumStatus;
 
 import lombok.Data;
 

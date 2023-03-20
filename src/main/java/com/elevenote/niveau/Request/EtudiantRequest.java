@@ -1,7 +1,7 @@
-package Request;
+package com.elevenote.niveau.Request;
 
-import Entity.Materiel;
-import EnumStatus.ClassementElevePourAnne;
+import com.elevenote.niveau.Entity.Materiel;
+import com.elevenote.niveau.EnumStatus.ClassementElevePourAnne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,7 +18,7 @@ public class EtudiantRequest {
 
     private String nom;
     private String nomFamille;
-    private LocalDate DateNaissance;
+    private String DateNaissance;
     private Boolean trimestre;
     private List<Materiel> materiels;
     private ClassementElevePourAnne status;

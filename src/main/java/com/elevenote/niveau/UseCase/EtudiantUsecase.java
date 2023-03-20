@@ -1,7 +1,7 @@
-package UseCase;
+package com.elevenote.niveau.UseCase;
 
-import RepositoryFacade.EtudiantRepositoryFacade;
-import Request.EtudiantRequest;
+import com.elevenote.niveau.RepositoryFacade.EtudiantRepositoryFacade;
+import com.elevenote.niveau.Request.EtudiantRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
-package Entity;
+package com.elevenote.niveau.Entity;
 
-import EnumStatus.ClassementElevePourAnne;
+import com.elevenote.niveau.EnumStatus.ClassementElevePourAnne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,13 +28,11 @@ public class Etudiant implements Serializable {
     @Column(name = "NOM_FAMILLE")
     private String nomFamille;
     @Column(name = "DATE_NAISSANCE")
-    private LocalDate DateNaissance;
+    private String DateNaissance;
     @Column(name = "TRIMESTRE")
     private Boolean trimestre;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "materiels")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "etudiant")
     private List<Materiel> materiels;
-    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "statusEleve")
     private ClassementElevePourAnne statusEleve;
 

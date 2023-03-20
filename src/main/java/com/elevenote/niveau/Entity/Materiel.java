@@ -1,4 +1,4 @@
-package Entity;
+package com.elevenote.niveau.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +11,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "Eleve")
+@Table(name = "Materiels")
 @Entity
 @Data
 public class Materiel implements Serializable {
@@ -38,7 +38,21 @@ public class Materiel implements Serializable {
     private Double langueChoisi;
     @Column(name = "ECM")
     private Double ecm;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ID_ELEVE")
     private Etudiant etudiant;
 
+    public Materiel(Materiel materiel) {
+        this.id = materiel.id;
+        this.anglais = materiel.anglais;
+        this.ecm = materiel.ecm;
+        this.chimie = materiel.chimie;
+        this.geographie = materiel.geographie;
+        this.histoire = materiel.histoire;
+        this.langueChoisi = materiel.langueChoisi;
+        this.math = materiel.math;
+        this.phisique = materiel.phisique;
+        this.sport =materiel.sport;
+    }
 }
