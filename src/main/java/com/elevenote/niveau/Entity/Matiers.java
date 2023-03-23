@@ -11,10 +11,10 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "Materiels")
+@Table(name = "Matiers")
 @Entity
 @Data
-public class Materiel implements Serializable {
+public class Matiers implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,7 +43,7 @@ public class Materiel implements Serializable {
     @JoinColumn(name = "ID_ELEVE")
     private Etudiant etudiant;
 
-    public Materiel(Materiel materiel) {
+    public Matiers(Matiers materiel) {
         this.id = materiel.id;
         this.anglais = materiel.anglais;
         this.ecm = materiel.ecm;

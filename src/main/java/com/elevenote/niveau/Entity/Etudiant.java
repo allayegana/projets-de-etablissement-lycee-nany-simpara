@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.List;
 
 @AllArgsConstructor
@@ -32,7 +31,7 @@ public class Etudiant implements Serializable {
     @Column(name = "TRIMESTRE")
     private Boolean trimestre;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "etudiant")
-    private List<Materiel> materiels;
+    private List<Matiers> materiels;
     @JoinColumn(name = "statusEleve")
     private ClassementElevePourAnne statusEleve;
 

@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RepositoryFacadeImpl implements EtudiantRepositoryFacade {
+public class EtudiantRepositoryFacadeImpl implements EtudiantRepositoryFacade {
 
     @Autowired
     private EtudiantRepository repository;
