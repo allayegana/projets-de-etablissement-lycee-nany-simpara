@@ -39,20 +39,19 @@ public class Matiers implements Serializable {
     @Column(name = "ECM")
     private Double ecm;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ID_ELEVE")
+    @ManyToOne( fetch = FetchType.LAZY)
+    @JoinColumn( name= "MATIERS_ID",nullable = false )
     private Etudiant etudiant;
 
-    public Matiers(Matiers materiel) {
-        this.id = materiel.id;
-        this.anglais = materiel.anglais;
-        this.ecm = materiel.ecm;
-        this.chimie = materiel.chimie;
-        this.geographie = materiel.geographie;
-        this.histoire = materiel.histoire;
-        this.langueChoisi = materiel.langueChoisi;
-        this.math = materiel.math;
-        this.phisique = materiel.phisique;
-        this.sport =materiel.sport;
-    }
+//    public Matiers(Matiers matiers) {
+//        this.anglais = matiers.getAnglais();
+//        this.ecm = matiers.getEcm();
+//        this.chimie = matiers.getChimie();
+//        this.histoire = matiers.getHistoire();
+//        this.geographie = matiers.getGeographie();
+//        this.math = matiers.getMath();
+//        this.phisique = matiers.getPhisique();
+//        this.sport = matiers.getSport();
+//        this.langueChoisi = matiers.getLangueChoisi();
+//    }
 }

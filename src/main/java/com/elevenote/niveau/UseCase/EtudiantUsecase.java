@@ -1,5 +1,6 @@
 package com.elevenote.niveau.UseCase;
 
+import com.elevenote.niveau.EnumStatus.ClassementElevePourAnne;
 import com.elevenote.niveau.RepositoryFacade.EtudiantRepositoryFacade;
 import com.elevenote.niveau.Request.EtudiantRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ public class EtudiantUsecase {
 //    }
 
     public void cadastrement(EtudiantRequest request) {
+        request.setStatus(ClassementElevePourAnne.BIEN);
         facade.sauvegarder(request);
     }
 }

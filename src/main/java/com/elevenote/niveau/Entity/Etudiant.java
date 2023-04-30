@@ -30,9 +30,11 @@ public class Etudiant implements Serializable {
     private String DateNaissance;
     @Column(name = "TRIMESTRE")
     private Boolean trimestre;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "etudiant")
+  //  @OneToMany(fetch = FetchType.LAZY, mappedBy = "etudiant")
+    @OneToMany( fetch = FetchType.LAZY,mappedBy ="etudiant")
     private List<Matiers> materiels;
     @JoinColumn(name = "statusEleve")
+    @Enumerated(EnumType.STRING)
     private ClassementElevePourAnne statusEleve;
 
 }
