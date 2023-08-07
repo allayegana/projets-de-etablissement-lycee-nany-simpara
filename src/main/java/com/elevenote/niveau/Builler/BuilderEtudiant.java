@@ -17,7 +17,7 @@ public class BuilderEtudiant {
 
         return Etudiant
                 .builder()
-               // .materiels(request.getMatiers().stream().map(Matiers::new).collect(Collectors.toList()))
+              //  .materiels(request.getMatiers().stream().map(Matiers::new).collect(Collectors.toList()))
                 .nom(request.getNom())
                 .DateNaissance(request.getDateNaissance())
                 .nomFamille(request.getNomFamille())

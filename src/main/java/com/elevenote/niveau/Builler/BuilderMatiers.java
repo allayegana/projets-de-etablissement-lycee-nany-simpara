@@ -13,7 +13,6 @@ public class BuilderMatiers {
 
         return Matiers
                 .builder()
-             //   .id(request.getEtudiant().getId())
                 .math(request.getMath())
                 .ecm(request.getEcm())
                 .anglais(request.getAnglais())

@@ -19,6 +19,6 @@ public class EtudiantRequest {
     private String nomFamille;
     private String DateNaissance;
     private Boolean trimestre;
- //   private List<Matiers> matiers;
+    private List<Matiers> matiers;
     private ClassementElevePourAnne status;
 }
